@@ -1,0 +1,186 @@
+.card {
+  
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(104, 102, 102, 0.885);
+  max-width: 350px;
+  
+  text-align: left;
+  
+}
+
+
+.card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: black;
+}
+.card span {
+    color: black;
+  font-weight: bold;
+}
+.card img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-title{
+  color: black;
+}
+.list-group-item{
+  background-color:white;
+  color: black;
+}
+
+
+
+.cards-box{
+  margin-top: 150px;
+}
+.accordion-body{
+  background: white;
+}
+
+.nav-link{
+  color: white;
+  font-size: 20px;
+  
+  
+}
+
+
+/* nav bar------------------------ */
+
+nav{
+  height: 10vh;
+  opacity: 0.9; 
+   
+}
+.nav-item{
+  margin-left: 50px;
+}
+
+
+
+
+.navbar{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+ 
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  width: 0;
+  height: 2px; /* Spessore della linea */
+  background-color: red; /* Colore della linea */
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: red; /* Cambia colore del testo al passaggio */
+}
+
+
+
+/* Contenitore della slideshow ----------------*/
+
+.container-img {
+  width: 100%;
+  height: 100vh;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  background: black; 
+  z-index: -1;
+}
+
+.container-img .box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: move 15s infinite;
+}
+
+
+.container-img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: fadeOverlay 30s infinite;
+}
+
+/* Immagini della slideshow */
+.container-img .box:nth-child(1) {
+  background-image: url('/public/img/tokyo.jpg');
+  animation-delay: 0s;
+}
+
+.container-img .box:nth-child(2) {
+  background-image: url('/public/img/rome.jpg');
+  animation-delay: 5s;
+}
+
+.container-img .box:nth-child(3) {
+  background-image: url('/public/img/paris.jpg');
+  animation-delay: 10s;
+}
+
+.container-img .box:nth-child(4) {
+  background-image: url('/public/img/London.jpg');
+  animation-delay: 15s;
+}
+
+.container-img .box:nth-child(5) {
+  background-image: url('/public/img/rio.jpg');
+  animation-delay: 20s;
+}
+
+.container-img .box:nth-child(6) {
+  background-image: url('/public/img/newYork.jpg');
+  animation-delay: 25s;
+}
+
+.container-img .box:nth-child(7) {
+  background-image: url('/public/img/sydney.jpg');
+  animation-delay: 30s;
+}
+
+.container-img .box:nth-child(8) {
+  background-image: url('/public/img/barcellona.jpg');
+  animation-delay: 35s;
+}
+
+/* Animazione immagini */
+@keyframes move {
+  0% { opacity: 0; transform: scale(1); }
+  10% { opacity: 1; }
+  30% { opacity: 1; transform: scale(1.1); }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
